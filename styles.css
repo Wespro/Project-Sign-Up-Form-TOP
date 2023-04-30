@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  background-color: #f1f6f9;
+}
+.leftSide {
+  background-image: url(./imgs/pexels-cottonbro-studio-4835419.jpg);
+  background-size: cover;
+  width: max(10000px, 2px);
+  height: 100vh;
+  position: relative;
+}
+
+.logo {
+  width: 120px;
+}
+.leftSide h1 {
+  position: absolute;
+  top: 80px;
+  left: 90px;
+  display: flex;
+  gap: 1rem;
+  color: antiquewhite;
+  align-items: center;
+  z-index: 1;
+  font-size: 2rem;
+}
+.logoRectangle {
+  background-color: black;
+  height: 120px;
+  opacity: 0.5;
+  position: relative;
+  top: 80px;
+}
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.top {
+  padding: 2rem 3rem;
+}
+.top h2 {
+  margin: 10px 0;
+  font-family: sans-serif;
+}
+.form-wrapper {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 2rem 3rem;
+  width: 65vw;
+}
+form {
+  display: flex;
+  position: relative;
+  gap: 1rem;
+}
+.form-wrapper h2 {
+  margin: 0 0 0.5rem;
+}
+.formInner {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+  gap: 6rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+input {
+  padding: 0.5rem;
+  width: 300px;
+  height: 35px;
+  border: 2px solid;
+  opacity: 0.3;
+  border-radius: 4px;
+}
+
+input:valid {
+  border: 2px solid rgb(3, 204, 3);
+  opacity: 1;
+}
+input:invalid {
+  border: 2px solid rgb(0, 156, 184);
+  opacity: 1;
+}
+label {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+.submit {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 63vw;
+  position: absolute;
+  bottom: -130px;
+}
+.submit button {
+  padding: 0.5rem 6rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #698352;
+  border-radius: 4px;
+}
+.submit button:hover {
+  background-color: #6e994a;
+}
+
+/* @media only screen and () {
+    
+} */
