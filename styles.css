@@ -82,6 +82,7 @@ form {
 .row {
   display: flex;
   justify-content: start;
+  width: 100%;
   gap: 8rem;
   flex-wrap: wrap;
 }
@@ -99,18 +100,30 @@ input {
   border-radius: 4px;
 }
 
-input:invalid {
+.error {
   border: 1px solid rgb(255, 51, 0);
   opacity: 1;
 }
-input:valid {
+input:valid:not(input[type="password"]) {
   border: 2px solid rgb(3, 204, 3);
+  opacity: 1;
+}
+
+.done {
+  border: 2px solid rgb(3, 204, 3);
+  opacity: 1;
+}
+::placeholder {
+  font-weight: bold;
   opacity: 1;
 }
 
 label {
   font-size: 0.9rem;
   margin-top: 1rem;
+}
+span {
+  color: red;
 }
 .submit {
   display: flex;
@@ -160,14 +173,15 @@ label {
   }
 
   .row {
-    justify-content: center;
+    justify-content: space-evenly;
+    gap: 1rem;
   }
 
   .submit {
     align-items: center;
   }
 }
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 840px) {
   .leftSide {
     width: 100vw;
     height: 30vh;
@@ -185,7 +199,7 @@ label {
     padding: 1rem;
   }
   .row {
-    justify-content: center;
-    gap: 0;
+    justify-content: space-around;
+    gap: 1rem;
   }
 }

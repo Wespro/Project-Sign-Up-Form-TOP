@@ -80,6 +80,8 @@
                 name="phone"
                 id="phone"
                 placeholder="011 *** *** ***"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                title=" Please add you phone number like this format: +011 *** *** *** "
                 required
               />
             </div>
@@ -87,17 +89,25 @@
           <div class="row passwordContainer">
             <div class="a password">
               <label for="passowrd">PASSWORD :</label>
-              <input type="password" name="passowrd" id="passowrd" required />
+              <input
+                type="password"
+                onchange="confirmPassowrd()"
+                name="passowrd"
+                id="passowrd"
+                required
+              />
             </div>
 
             <div class="a c-password">
               <label for="c-passowrd"> CONFIRM PASSWORD :</label>
               <input
+                onchange="confirmPassowrd()"
                 type="password"
                 name="c-passowrd"
                 id="c-passowrd"
                 required
               />
+              <span class="CpasswordError"></span>
             </div>
           </div>
 
@@ -108,5 +118,6 @@
         </form>
       </div>
     </section>
+    <script src="./app.js"></script>
   </body>
 </html>
